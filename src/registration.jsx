@@ -35,59 +35,44 @@ function Registration() {
         }
     }
 
-    return (
-        <div className="container mt-5" style={{ maxWidth: "500px" }}>
-            <h1 className="text-center mb-4">Registration Form</h1>
-            <form onSubmit={(e) => e.preventDefault()}>
-                <div className="form-group mb-3">
-                    <input
-                        type="text"
-                        placeholder="Name"
-                        value={userData.name}
-                        onChange={handleForm}
-                        name="name"
-                        className="form-control"
-                        autoComplete="off"
-                        required
-                    />
-                </div>
-                <div className="form-group mb-3">
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={userData.email}
-                        onChange={handleForm}
-                        name="email"
-                        className="form-control"
-                        autoComplete="off"
-                        required
-                    />
-                </div>
-                <div className="form-group mb-3">
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={userData.password}
-                        onChange={handleForm}
-                        name="password"
-                        className="form-control"
-                        autoComplete="off"
-                        required
-                    />
-                </div>
-                <button onClick={storeUserData} className="btn btn-primary w-100">
-                    Register
-                </button>
-            </form>
-            <div className="text-center mt-4">
-                <NavLink to='/login' className="btn btn-link">
-                    <h3>Login Page</h3>
-                </NavLink>
-                <NavLink to='/account' className="btn btn-link">
-                    <h3>Manage Your Account</h3>
-                </NavLink>
-            </div>
-        </div>
+return (
+
+<div className="container mt-5" style={{ maxWidth: "500px" }}>
+    <h1 className="text-center mb-4">Registration Form</h1>
+    <form onSubmit={(e) => e.preventDefault()}>
+                
+    <div className="form-group mb-3">
+        <input type="text" placeholder="Name" value={userData.name} onChange={handleForm} name="name" className="form-control" autoComplete="off" required/>
+    </div>
+
+    <div className="form-group mb-3">
+        <input type="email" placeholder="Email" value={userData.email} onChange={handleForm} name="email" className="form-control" autoComplete="off" required/>
+    </div>
+
+    <div className="form-group mb-3">
+        <input type="password" placeholder="Password" value={userData.password} onChange={handleForm} name="password" className="form-control" autoComplete="off" required/>
+    </div>
+
+    <button onClick={storeUserData} className="btn btn-primary w-100">
+        Register
+    </button>
+
+    </form>
+
+    <div className="text-center mt-4">
+        <NavLink to='/login' className="btn btn-link">
+            <h3>Login Page</h3>
+        </NavLink>
+        <NavLink to='/account' className="btn btn-link">
+            <h3>Manage Your Account</h3>
+        </NavLink>
+    </div>
+
+    <div className="text-center mt-5">
+        <NavLink to='/'><button className="btn btn-primary">Home</button></NavLink>
+    </div>
+
+</div>
     );
 }
 
